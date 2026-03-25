@@ -1,0 +1,60 @@
+/* Fonts loaded at runtime — not during build */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=DM+Mono:wght@400;500;600&display=swap');
+
+:root {
+  --pink:        #E8197A;
+  --pink-dark:   #C4166A;
+  --pink-mid:    #F06EB0;
+  --pink-pale:   #FDE8F2;
+  --pink-ghost:  #FEF4FA;
+  --pink-border: #F4ADCF;
+  --dark:        #1C1C2E;
+  --body:        #3D3D4E;
+  --muted:       #888899;
+  --bg:          #FFFFFF;
+  --bg-2:        #FAFAFA;
+  --border:      #EDECF0;
+  --green:       #1A7A4A;
+  --green-bg:    #EAF7F0;
+  --amber:       #B86B00;
+  --amber-bg:    #FFF8EC;
+  --red:         #B71C1C;
+  --red-bg:      #FDECEA;
+  --blue:        #1E40AF;
+  --blue-bg:     #EEF4FF;
+  --font-sans:   'DM Sans', sans-serif;
+  --font-mono:   'DM Mono', monospace;
+  --radius:      8px;
+  --radius-lg:   12px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--font-sans);
+  background: var(--bg);
+  color: var(--body);
+  font-size: 14px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--pink-border); border-radius: 3px; }
+
+/* Base button reset */
+button { cursor: pointer; font-family: var(--font-sans); }
+input, select { font-family: var(--font-sans); }
+a { color: inherit; text-decoration: none; }
+
+/* Animations */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+.fade-up { animation: fadeUp 0.25s ease both; }
